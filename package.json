@@ -1,0 +1,25 @@
+{
+  "name": "my-auto-e2e-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "codeceptjs": "^2.5.0",
+    "puppeteer": "^2.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stasuello/my-auto-e2e-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stasuello/my-auto-e2e-tests/issues"
+  },
+  "homepage": "https://github.com/stasuello/my-auto-e2e-tests#readme"
+}
