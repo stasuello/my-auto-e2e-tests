@@ -12,10 +12,13 @@ exports.config = {
     Puppeteer: {
       url: 'https://www.sjob-dev.ru/',
       show: false,
-      chrome: {
-        args: ['--ignore-certificate-errors', '--incognito'],
-      },
-    }
+      browser: 'firefox',
+      firefox: {
+        args: [
+          '--ignore-certificate-errors'
+        ],
+      }
+    },
   },
   include: {
     I: './steps_file.js'
@@ -30,5 +33,5 @@ exports.config = {
     screenshotOnFail: {
       enabled: true
     }
-  }
+  },
 }
