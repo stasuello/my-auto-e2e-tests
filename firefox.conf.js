@@ -11,7 +11,7 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'https://www.sjob-dev.ru/',
-      show: false,
+      show: true,
       browser: 'firefox',
       firefox: {
         args: [
@@ -34,4 +34,4 @@ exports.config = {
       enabled: true
     }
   },
-}
+};

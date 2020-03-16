@@ -11,7 +11,7 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'https://www.sjob-dev.ru/',
-      show: false,
+      show: true,
       chrome: {
         args: ['--ignore-certificate-errors', '--incognito'],
       },
@@ -22,6 +22,10 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
+  rerun: {
+    minSuccess: 10,
+    maxReruns: 10,
+  },
   name: 'my-auto-e2e-tests',
   plugins: {
     retryFailedStep: {
@@ -31,4 +35,4 @@ exports.config = {
       enabled: true
     }
   }
-}
+};

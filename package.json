@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "puppeteer-firefox": "^0.5.1"
+  },
   "devDependencies": {
     "codeceptjs": "^2.5.0",
     "puppeteer": "^2.1.1"
