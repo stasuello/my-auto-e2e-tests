@@ -9,16 +9,29 @@ exports.config = {
   show: process.env.HEADLESS === 'true',
   output: './output',
   helpers: {
-    Puppeteer: {
-      url: 'https://www.sjob-dev.ru/',
-      show: true,
-      chrome: {
-        args: ['--ignore-certificate-errors', '--incognito'],
+    Playwright: {
+      browser: process.env.BROWSER || 'chromium',
+      url: `https://www.${process.env.CODECEPT_URL}.ru`,
+      show: process.env.HEADLESS === 'false',
+      restart: true,
+      fullPageScreenshots: true,
+      waitForTimeout: 30000,
+      waitForAction: 100,
+      windowSize: '1440 x 768',
+      getPageTimeout: 60000,
+      uniqueScreenshotNames: true,
+      emulate: {
+        ignoreHTTPSErrors: true,
+        acceptDownloads: true,
       },
-    }
+      chromium: {
+        args: ['--disable-dev-shm-usage'],
+        devtools: false,
+      },
+    },
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
   },
   bootstrap: null,
   mocha: {},
@@ -29,10 +42,10 @@ exports.config = {
   name: 'my-auto-e2e-tests',
   plugins: {
     retryFailedStep: {
-      enabled: true
+      enabled: true,
     },
     screenshotOnFail: {
-      enabled: true
-    }
-  }
-};
+      enabled: true,
+    },
+  },
+}
