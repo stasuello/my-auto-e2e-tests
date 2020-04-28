@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "puppeteer-firefox": "^0.5.1"
-  },
+
   "devDependencies": {
     "codeceptjs": "^2.5.0",
     "eslint": "^6.0.0",

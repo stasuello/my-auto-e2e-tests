@@ -1,5 +1,5 @@
 module.exports = {
-  url: 'https://the-internet.herokuapp.com/dropdown',
+  url: '/dropdown',
   dropdown: { css: '#dropdown' },
   selectedOption: { xpath: '//option[@selected]' },
 };

@@ -1,5 +1,5 @@
 module.exports = {
-  url: 'https://the-internet.herokuapp.com/login',
+  url: '/login',
   input: {
     password: { css: '#password' },
     username: { css: '#username' },
