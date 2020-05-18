@@ -29,6 +29,9 @@ exports.config = {
         devtools: false,
       },
     },
+    MyPlaywright: {
+      require: './myplaywright_helper.js',
+    },
   },
   include: {
     I: './steps_file.js',
