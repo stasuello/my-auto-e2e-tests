@@ -15,7 +15,7 @@ env:
 
 jobs:
   build:
-    name: 'Chromium'
+    name: 'Firefox'
     runs-on: ubuntu-18.04
     strategy:
       matrix:
@@ -33,5 +33,5 @@ jobs:
     - name: npm install
       run: |
         npm install
-    - name: run chromium tests
-      run: "./node_modules/.bin/codeceptjs run --steps"
+    - name: run firefox tests
+      run: "BROWSER=firefox ./node_modules/.bin/codeceptjs run --steps"
