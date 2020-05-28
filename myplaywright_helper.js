@@ -8,7 +8,6 @@ class MyPlaywright extends Helper {
 
   // before/after hooks
   _before() {
-    errors = null;
     this.page().on('pageerror', (exception) => {
       errors = Error(exception);
     });
@@ -16,7 +15,6 @@ class MyPlaywright extends Helper {
 
   _afterStep() {
     if (errors) {
-      console.log('erroring....');
       throw new Error(errors);
     }
     errors = null;
