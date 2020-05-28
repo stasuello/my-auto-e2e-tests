@@ -33,8 +33,5 @@ jobs:
     - name: npm install
       run: |
         npm install
-    - name: run tests
-      run: |
-        ./node_modules/.bin/codeceptjs run --steps
-        BROWSER=webkit ./node_modules/.bin/codeceptjs run --steps
-        BROWSER=firefox ./node_modules/.bin/codeceptjs run --steps
+    - name: run chromium tests
+      run: "./node_modules/.bin/codeceptjs run --steps"
