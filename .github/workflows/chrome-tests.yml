@@ -1,5 +1,5 @@
 name: Playwright Tests
-​
+
 on:
   push:
     branches:
@@ -7,12 +7,12 @@ on:
   pull_request:
     branches:
       - master
-​
+
 env:
   CI: true
   # Force terminal colors. @see https://www.npmjs.com/package/colors
   FORCE_COLOR: 1
-​
+
 jobs:
   build:
     name: 'Chromium'
