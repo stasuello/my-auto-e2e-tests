@@ -1,5 +1,5 @@
 const { Helper } = codeceptjs;
-const errors = [];
+let errors;
 
 class MyPlaywright extends Helper {
   page() {
@@ -7,20 +7,25 @@ class MyPlaywright extends Helper {
   }
 
   // before/after hooks
-  /**
-   * @protected
-   */
   _before() {
+    errors = null;
     this.page().on('pageerror', (exception) => {
-      errors.push(exception);
+      errors = Error(exception);
     });
+  }
+
+  _afterStep() {
+    if (errors) {
+      console.log('erroring....');
+      throw new Error(errors);
+    }
+    errors = null;
   }
 
   /**
    * @protected
    */
   _after() {
-    if (errors.includes('Error')) throw new Error(errors);
   }
 
   async goBack() {
