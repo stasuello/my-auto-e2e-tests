@@ -11,3 +11,7 @@ Scenario('Переходы по ссылкам', () => {
   I.click('File Upload');
   I.waitForText('File Upload', 30, mainPage.title);
 });
+
+Scenario('Проверка на error', () => {
+  I.amOnPage('/javascript_error');
+});

@@ -1,4 +1,5 @@
 const { Helper } = codeceptjs;
+const errors = [];
 
 class MyPlaywright extends Helper {
   page() {
@@ -10,14 +11,16 @@ class MyPlaywright extends Helper {
    * @protected
    */
   _before() {
-    // remove if not used
+    this.page().on('pageerror', (exception) => {
+      errors.push(exception);
+    });
   }
 
   /**
    * @protected
    */
   _after() {
-    // remove if not used
+    if (errors.includes('Error')) throw new Error(errors);
   }
 
   async goBack() {
