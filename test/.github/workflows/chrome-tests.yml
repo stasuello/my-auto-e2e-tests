@@ -34,6 +34,6 @@ jobs:
         npm install
     - name: run tests
       run: |
-        BROWSER=chromium node ./bin/codecept.js run --steps
-        BROWSER=firefox node ./bin/codecept.js run --steps
-        BROWSER=webkit node ./bin/codecept.js run --steps
+        node node_modules/.bin/codeceptjs run --debug
+        BROWSER=firefox node node_modules/.bin/codeceptjs run --debug
+        BROWSER=webkit node node_modules/.bin/codeceptjs run --debug
