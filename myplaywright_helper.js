@@ -16,7 +16,6 @@ class MyPlaywright extends Helper {
 
   _afterStep() {
     if (errors) {
-      console.log('erroring....');
       throw new Error(errors);
     }
     errors = null;
