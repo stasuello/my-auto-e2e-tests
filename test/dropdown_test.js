@@ -12,5 +12,5 @@ Scenario('Выбираем опцию по тексту, после выбора
 Scenario('Выбираем опцию по значению, после выбора проверяем, что выбрана опция с текстом', () => {
   I.amOnPage(dropdownPage.url);
   I.selectOption(dropdownPage.dropdown, '2');
-  I.waitForText('Option 2', 30, dropdownPage.selectedOption);
+  I.seeTextEquals('Option 2', dropdownPage.selectedOption);
 });

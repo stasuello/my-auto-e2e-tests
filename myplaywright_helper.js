@@ -8,6 +8,7 @@ class MyPlaywright extends Helper {
 
   // before/after hooks
   _before() {
+    errors = null;
     this.page().on('pageerror', (exception) => {
       errors = Error(exception);
     });

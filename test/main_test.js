@@ -6,12 +6,12 @@ Feature('Links');
 Scenario('Переходы по ссылкам', () => {
   I.amOnPage(mainPage.url);
   I.click('File Download');
-  I.waitForText('File Download', 30, mainPage.title);
+  I.seeTextEquals('File Downloader', mainPage.title);
   I.goBack();
   I.click('File Upload');
-  I.waitForText('File Upload', 30, mainPage.title);
+  I.seeTextEquals('File Uploader', mainPage.title);
 });
 
-Scenario('Проверка на error', () => {
+xScenario('Проверка на error', () => {
   I.amOnPage('/javascript_error');
 });
