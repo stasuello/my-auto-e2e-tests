@@ -35,3 +35,10 @@ jobs:
         npm install
     - name: run chromium tests
       run: "./node_modules/.bin/codeceptjs run --steps"
+    - name: Notify Telegram
+      uses: yanzay/notify-telegram@v0.1.0
+      if: always()
+      with:
+        chat: ${{ 115784308 }} # user id or channel name secret
+        token: ${{ 1233100014:AAEQy_-u-op6dVh9_gGxYCq4HFJshgg2UII }} # token secret
+        status: ${{ job.status }} # do not modify this line
