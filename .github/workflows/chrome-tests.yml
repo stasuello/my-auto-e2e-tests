@@ -40,5 +40,5 @@ jobs:
       if: always()
       with:
         chat: ${{ 115784308 }} # user id or channel name secret
-        token: ${{ 1233100014 }} # token secret
+        token: ${{ '1233100014:AAEQy_-u-op6dVh9_gGxYCq4HFJshgg2UII' }} # token secret
         status: ${{ job.status }} # do not modify this line
